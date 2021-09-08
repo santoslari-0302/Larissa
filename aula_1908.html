@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>
+                        Aulas Tabelas Interativas
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <table class="table" id="tabela">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Codigo
+                                        </th>
+                                        <th>
+                                            Nome
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4">
+                            <dl>
+                                <dt>
+                                    oi
+                                </dt>
+                                <dt>
+                                    tudo bem?
+                                </dt>
+
+                            </dl>
+                            <input type="text" id="nome">
+                            <button onclick="palavra()" type="button" class="btn active btn-block btn-success">
+                                Button
+                            </button>
+
+                            <script>
+                                var cod = 0
+                                function palavra() {
+                                    cod++;
+                                    var a = document.getElementById("nome").value
+                                    var linha = "<tr><td>" + cod + "</td><td>" + a + "</td>"
+                                    document.getElementById("tabela").innerHTML += linha;
+                                    document.getElementById("tabela").innerHTML += "</tr>";
+
+
+                                }
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
